@@ -15,21 +15,21 @@ import java.text.DecimalFormat;
 	  
 	  	//constructor for creating a new account 3 ways
 		public Account() {
-			System.out.println("A new account has been created with Account Id: " + newId);
-		    System.out.println("***********************************************************************************************");
+			//System.out.println("A new account has been created with Account Id: " + newId);
+		    //System.out.println("***********************************************************************************************");
 			Id = newId;
 			newId++;
 		}
 		public Account(String description) {
-			System.out.println("A new account has been created with Account Id: " + newId);
-		    System.out.println("***********************************************************************************************");
+			//System.out.println("A new account has been created with Account Id: " + newId);
+		    //System.out.println("***********************************************************************************************");
 			setDescription(description);
 			Id = newId;
 			newId++;
 		}
 		public Account(int Id, String description) {
-			System.out.println("A new account has been created with Account Id: " + Id);
-		    System.out.println("***********************************************************************************************");
+			//System.out.println("A new account has been created with Account Id: " + Id);
+		    //System.out.println("***********************************************************************************************");
 			setId(Id);
 			setDescription(description);
 			newId++;
@@ -89,11 +89,11 @@ import java.text.DecimalFormat;
 		    if (x <= this.balance) {
 		        bank.withdraw(x);
 		        deposit(x);
-		        System.out.println("\nTransfer succesful. Transfered: $" + df.format(x));
-			    System.out.println("***********************************************************************************************");
+		        //System.out.println("\nTransfer succesful. Transfered: $" + df.format(x));
+			    //System.out.println("***********************************************************************************************");
 		    } else { 
-		        System.out.println("\nTransfer failed, Insufficient Balance!");
-			    System.out.println("***********************************************************************************************");
+		        //System.out.println("\nTransfer failed, Insufficient Balance!");
+			    //System.out.println("***********************************************************************************************");
 		    }
 		}
 	}
