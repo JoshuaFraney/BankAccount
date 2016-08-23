@@ -1,6 +1,6 @@
 package ssa;
 
-public class Mainline {
+public class Mainline1 {
 	
 	public static void main(String[] args) {
 		
