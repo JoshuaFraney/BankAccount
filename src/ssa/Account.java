@@ -65,21 +65,28 @@ import java.text.DecimalFormat;
 		
 	  // returns the account info as a string
 		String print()  {
-			  return "Account " + Id +  "has a current balance of $" + df.format(balance); 
+			  return "Account " + Id +  " has a current balance of $" + df.format(balance); 
 			 // System.out.println("Account ID " + Id + "has a current balance of $" + df.format(balance));
 	  }
 	
 
 	// deposit into the account
 	  double deposit(double amount) {
+		if (amount < 0) {
+			System.out.println("Error! Unable to process the requested deposit");
+		}
+		else {
 	    balance += amount;
-	    return balance; 
+	     }
+		return balance;
 	  }
 	  // withdraw from the account, but cannot go negative
 	  double withdraw(double amount) {
 	    if(amount > balance) {
 	      System.out.println("Insufficient funds! Unable to complete the requested withdrawal.");
-	    } else {
+	    } else if(amount < 0)
+			System.out.println("Error! Unable to process the requested withdraw");
+	    else {
 	      balance -= amount;
 	    }
 	    return balance;
